@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header><h1 class="bringInCenter">Task List</h1></header>
+    <main>
+        <div class="inputContainer">
+            <input id="buddyNameInput" type="text" placeholder="Enter Task name...." onchange="updateBuddyList()">
+        </div>
+        <div class="listContainer">
+            <table>
+                <thead>
+                    <th>Completed</th>
+                    <th>Task Name</th>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+            <input id="completedButton" type="button" value="completed" onclick="removeCompletedTask(false)">
+        </div>
+        
+    </main>
+    <footer>
+        <h2 class="bringInCenter">List tasks to complete them</h2>
+    </footer>
+</body>
+</html>

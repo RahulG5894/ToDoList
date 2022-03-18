@@ -1,0 +1,72 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+header{
+    display: flex;
+    height: 10vh;
+    background-color: rgb(58, 145, 145);
+    color: white;
+    display: flex;
+}
+main{
+    min-height: 80vh;
+    background-color: rgb(158, 219, 219);
+}
+
+.inputContainer{
+    width: 50%;
+    margin: auto;
+    padding: 3% 5%;
+    display: flex;
+}
+
+#buddyNameInput{
+    margin: auto;
+    height: 4vh;
+    width: 80%;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+.listContainer{
+    margin: auto;
+    display: flex;
+    width: 50%;
+    font-size: large;
+    flex-direction: column;
+}
+
+table, th{
+    width: 50%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+td, tr{
+    text-align: center;
+    margin: auto;
+    /* background-color: black; */
+    color: black;
+    border-radius: 5px;
+}
+
+#completedButton{
+    margin: auto;
+    /* border: none; */
+    /* background-color: transparent; */
+    font-size: large;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+footer{
+    height: 10vh;
+    background-color: aqua;
+    display: flex;
+}
+.bringInCenter{
+    margin:auto;
+}
