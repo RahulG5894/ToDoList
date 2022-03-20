@@ -45,6 +45,10 @@ table, th{
     text-align: center;
 }
 
+.emptyListMsg{
+    margin: auto;
+}
+
 td, tr{
     text-align: center;
     margin: auto;

@@ -1,19 +1,34 @@
 function updateBuddyList(){
     const buddyName = document.getElementById("buddyNameInput").value;
     if(buddyName) createRow(buddyName);      
+    checkListSize();
 }
+
+function checkListSize(){
+    const table = document.getElementById('tableBody');
+    let trs = table.getElementsByTagName('tr');
+    if(trs.length){
+        document.getElementById("emptyList").style.visibility="hidden";
+        // console.log("it is not visible");
+    }
+    else{
+        document.getElementById("emptyList").style.visibility="visible";
+        // console.log("it is visible")
+    }
+}
+
 function removeCompletedTask(activateButton){
-    if(activateButton) console.log("activate button called");
-    else console.log("remove tasks called");
+    // if(activateButton) console.log("activate button called");
+    // else console.log("remove tasks called");
     const table = document.getElementById('tableBody');
     let trs = table.getElementsByTagName('tr');
     let activateCount = 0;
     let i=0;
     while(i<trs.length){
         let tds = trs[i].getElementsByTagName('td');
-        console.log(tds[0], i);
+        // console.log(tds[0], i);
         let checkbox = tds[0].querySelector('input[name="checkbox"]');
-        console.log(checkbox.checked);
+        // console.log(checkbox.checked);
         if(activateButton){
             if(checkbox.checked) activateCount++;
             i++;
@@ -21,21 +36,10 @@ function removeCompletedTask(activateButton){
         else{
             if(checkbox.checked){
                 table.removeChild(trs[i]);
-                console.log("row removed");
+                // console.log("row removed");
             }
             else i++;
         }
-        // if(checkbox.checked){
-        //     if(activateButton){
-        //         activateCount++;
-        //         console.log("button activated")
-        //         i++;
-        //     }
-        //     else
-        //     {
-                
-        //     }
-        // }
     }  
     if(activateCount>0) {
         document.getElementById('completedButton').style.visibility="visible";
@@ -43,6 +47,7 @@ function removeCompletedTask(activateButton){
     else{
         document.getElementById('completedButton').style.visibility="hidden";
     }
+    checkListSize();
 }
 function createRow(buddyName) {
     const row = document.createElement('tr');
@@ -62,5 +67,4 @@ function createRow(buddyName) {
     const tablebody = document.getElementById('tableBody');
     tablebody.appendChild(row);
     checkbox.addEventListener('change', removeCompletedTask);
-
 }

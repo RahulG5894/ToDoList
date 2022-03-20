@@ -12,7 +12,7 @@
     <header><h1 class="bringInCenter">Task List</h1></header>
     <main>
         <div class="inputContainer">
-            <input id="buddyNameInput" type="text" placeholder="Enter Task name...." onchange="updateBuddyList()">
+            <input id="buddyNameInput" type="text" placeholder="Enter Task name here...." onchange="updateBuddyList()">
         </div>
         <div class="listContainer">
             <table>
@@ -25,8 +25,8 @@
                 </tbody>
             </table>
             <input id="completedButton" type="button" value="completed" onclick="removeCompletedTask(false)">
+            <p id="emptyList" class="emptyListMsg">Task List is empty.....</p>
         </div>
-        
     </main>
     <footer>
         <h2 class="bringInCenter">List tasks to complete them</h2>
